@@ -1,0 +1,250 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "TTLCache",
+        "importPath": "cachetools",
+        "description": "cachetools",
+        "isExtraImport": true,
+        "detail": "cachetools",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "gradio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gradio",
+        "description": "gradio",
+        "detail": "gradio",
+        "documentation": {}
+    },
+    {
+        "label": "re,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re.",
+        "description": "re.",
+        "detail": "re.",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "app",
+        "description": "app",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_interface",
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "isExtraImport": true,
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "get_search_sources",
+        "kind": 2,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "def get_search_sources(topic: str, count: int):\n    cache_key = f\"search::{topic}::{count}\"\n    if cache_key in query_cache:\n        return query_cache[cache_key]\n    prompt = (\n        f\"List {count} authoritative sources (title + URL) for further reading on “{topic}”.\"\n    )\n    payload = {\n        \"model\": \"sonar\",\n        \"messages\": [",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_structured_report",
+        "kind": 2,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "def get_structured_report(topic: str, temp: float, context: str):\n    cache_key = f\"report::{topic}::{temp}::{context}\"\n    if cache_key in query_cache:\n        return query_cache[cache_key]\n    system = (\n        \"You are DeepDive Scholar, an expert academic researcher. \"\n        \"Produce a concise, structured report on the user's query. \"\n        \"Use these sections:\\n\"\n        \"• **Definitions**\\n\"\n        \"• **Historical Milestones**\\n\"",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "API_KEY = os.getenv(\"PERPLEXITY_API_KEY\")\nBASE_URL = \"https://api.perplexity.ai\"\nENDPOINT = \"/chat/completions\"\nHEADERS = {\n    \"Authorization\": f\"Bearer {API_KEY}\",\n    \"Content-Type\": \"application/json\"\n}\ndef get_search_sources(topic: str, count: int):\n    cache_key = f\"search::{topic}::{count}\"\n    if cache_key in query_cache:",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "BASE_URL = \"https://api.perplexity.ai\"\nENDPOINT = \"/chat/completions\"\nHEADERS = {\n    \"Authorization\": f\"Bearer {API_KEY}\",\n    \"Content-Type\": \"application/json\"\n}\ndef get_search_sources(topic: str, count: int):\n    cache_key = f\"search::{topic}::{count}\"\n    if cache_key in query_cache:\n        return query_cache[cache_key]",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "ENDPOINT",
+        "kind": 5,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "ENDPOINT = \"/chat/completions\"\nHEADERS = {\n    \"Authorization\": f\"Bearer {API_KEY}\",\n    \"Content-Type\": \"application/json\"\n}\ndef get_search_sources(topic: str, count: int):\n    cache_key = f\"search::{topic}::{count}\"\n    if cache_key in query_cache:\n        return query_cache[cache_key]\n    prompt = (",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "kind": 5,
+        "importPath": "app.api",
+        "description": "app.api",
+        "peekOfCode": "HEADERS = {\n    \"Authorization\": f\"Bearer {API_KEY}\",\n    \"Content-Type\": \"application/json\"\n}\ndef get_search_sources(topic: str, count: int):\n    cache_key = f\"search::{topic}::{count}\"\n    if cache_key in query_cache:\n        return query_cache[cache_key]\n    prompt = (\n        f\"List {count} authoritative sources (title + URL) for further reading on “{topic}”.\"",
+        "detail": "app.api",
+        "documentation": {}
+    },
+    {
+        "label": "query_cache",
+        "kind": 5,
+        "importPath": "app.cache",
+        "description": "app.cache",
+        "peekOfCode": "query_cache = TTLCache(maxsize=50, ttl=600)",
+        "detail": "app.cache",
+        "documentation": {}
+    },
+    {
+        "label": "process_query",
+        "kind": 2,
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "peekOfCode": "def process_query(topic, temp, context, count):\n    topic = topic.strip()\n    if not topic:\n        return \"❗ Please enter a research topic.\", \"\", \"\", \"\"\n    # 1) Fetch report\n    res = api.get_structured_report(topic, temp, context)\n    if \"report\" not in res:\n        return f\"**Error:** {res.get('error', 'Unknown')}\", \"\", \"\", \"\"\n    report, refs, chain = res[\"report\"], res[\"references\"], res[\"chain\"]\n    # 2) Link inline citations",
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "export_md",
+        "kind": 2,
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "peekOfCode": "def export_md(report_md, refs_md):\n    combined = report_md + \"\\n\\n\" + refs_md\n    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=\".md\", mode=\"w\", encoding=\"utf-8\")\n    tmp.write(combined)\n    tmp.close()\n    return tmp.name\ndef submit_feedback(topic, rating, comment):\n    if topic.strip() and rating:\n        utils.save_feedback(topic, rating, comment)\n        avg = utils.get_average_rating(topic)",
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "submit_feedback",
+        "kind": 2,
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "peekOfCode": "def submit_feedback(topic, rating, comment):\n    if topic.strip() and rating:\n        utils.save_feedback(topic, rating, comment)\n        avg = utils.get_average_rating(topic)\n        return f\"✅ Thanks! New avg. rating: {avg}★\"\n    return \"⚠️ Cannot save feedback.\"\ndef create_interface():\n    theme = gr.themes.Soft(primary_hue=\"purple\")\n    css = \"\"\"\n    .gradio-container { max-width: 1200px; margin: auto; }",
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "create_interface",
+        "kind": 2,
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "peekOfCode": "def create_interface():\n    theme = gr.themes.Soft(primary_hue=\"purple\")\n    css = \"\"\"\n    .gradio-container { max-width: 1200px; margin: auto; }\n    .input-column { padding: 1rem; border: 1px solid #444; border-radius: 8px; }\n    .output-column { padding: 1rem; border: 1px solid #444; border-radius: 8px; }\n    \"\"\"\n    with gr.Blocks(theme=theme, css=css) as demo:\n        # Header\n        gr.Markdown(\"<h1 style='margin-bottom:0.5rem;'>🔍 DeepDive Scholar</h1>\", elem_id=\"header\")",
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "extract_chain_of_thought",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def extract_chain_of_thought(text: str):\n    if \"<think>\" in text and \"</think>\" in text:\n        before, after = text.split(\"</think>\", 1)\n        chain = before.replace(\"<think>\", \"\").strip()\n        return chain, after.strip()\n    return None, text\ndef extract_references(text: str):\n    idx = text.lower().rfind(\"references:\")\n    if idx == -1:\n        return text.strip(), []",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_references",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def extract_references(text: str):\n    idx = text.lower().rfind(\"references:\")\n    if idx == -1:\n        return text.strip(), []\n    main = text[:idx].strip()\n    refs_lines = text[idx:].splitlines()[1:]\n    refs = []\n    for line in refs_lines:\n        match_url = re.search(r'https?://\\S+', line)\n        if not match_url:",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "parse_search_results",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def parse_search_results(text: str):\n    lines = text.splitlines()\n    out = []\n    for line in lines:\n        u = re.search(r'https?://\\S+', line)\n        if not u:\n            continue\n        url = u.group().rstrip(\").,\")\n        title = line[:u.start()].strip(\" -.:\")\n        if not title:",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "save_feedback",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def save_feedback(topic, rating, comment):\n    os.makedirs(os.path.dirname(FEEDBACK_PATH), exist_ok=True)\n    data = []\n    if os.path.exists(FEEDBACK_PATH):\n        data = json.load(open(FEEDBACK_PATH, encoding=\"utf-8\"))\n    data.append({\"topic\": topic, \"rating\": rating, \"comment\": comment})\n    with open(FEEDBACK_PATH, \"w\", encoding=\"utf-8\") as f:\n        json.dump(data, f, ensure_ascii=False, indent=2)\ndef get_average_rating(topic):\n    if not os.path.exists(FEEDBACK_PATH):",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_average_rating",
+        "kind": 2,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "def get_average_rating(topic):\n    if not os.path.exists(FEEDBACK_PATH):\n        return None\n    data = json.load(open(FEEDBACK_PATH, encoding=\"utf-8\"))\n    ratings = [d[\"rating\"] for d in data if d[\"topic\"].lower() == topic.lower()]\n    if not ratings:\n        return None\n    return round(sum(ratings) / len(ratings), 1)",
+        "detail": "app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "FEEDBACK_PATH",
+        "kind": 5,
+        "importPath": "app.utils",
+        "description": "app.utils",
+        "peekOfCode": "FEEDBACK_PATH = os.path.join(os.getcwd(), \"data\", \"feedback.json\")\ndef save_feedback(topic, rating, comment):\n    os.makedirs(os.path.dirname(FEEDBACK_PATH), exist_ok=True)\n    data = []\n    if os.path.exists(FEEDBACK_PATH):\n        data = json.load(open(FEEDBACK_PATH, encoding=\"utf-8\"))\n    data.append({\"topic\": topic, \"rating\": rating, \"comment\": comment})\n    with open(FEEDBACK_PATH, \"w\", encoding=\"utf-8\") as f:\n        json.dump(data, f, ensure_ascii=False, indent=2)\ndef get_average_rating(topic):",
+        "detail": "app.utils",
+        "documentation": {}
+    }
+]

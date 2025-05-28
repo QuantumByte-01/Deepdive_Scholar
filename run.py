@@ -1,5 +1,4 @@
-# run.py
-import app  # loads .env and ensures data folder
+import app 
 from app.routes import create_interface
 
 if __name__ == "__main__":
